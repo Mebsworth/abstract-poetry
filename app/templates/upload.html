@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<form class="ui form" action="{{ url_for('upload') }}" method="POST" name="imageUpload" enctype="multipart/form-data">
+    <div class="field">
+        <label>Upload an image of abstract art</label>
+        <input type="file" name="image">
+    </div>
+    <input type="submit" value="Upload">
+</form>
+
+{% endblock %}

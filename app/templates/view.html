@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="ui grid">
+  <div class="eight wide column">
+    <img src="{{ filepath }}" width="300px">
+  </div>
+  <div class="eight wide column">
+    {% for tag in tags %}
+        <p> {{ tag }}</p>
+    {% endfor %}
+  </div>
+
+</div>
+
+
+{% endblock %}
