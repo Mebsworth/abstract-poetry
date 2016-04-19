@@ -4,4 +4,4 @@ app/.DS_Store
 venv/
 
 # Executables
-.pyc
+*.pyc
