@@ -10,6 +10,8 @@ class ChainBuilder:
     def build_chain(self):
         corpus = open('corpus.txt', 'r')
         for line in corpus:
+            line = line.replace('"', '')
+            line = line.replace('-', '')
             line = line.split()
             if len(line) > 1:
                 pre = line[0]
