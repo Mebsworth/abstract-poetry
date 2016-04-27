@@ -1,17 +1,20 @@
 from markov_chain import MarkovChain
+import unicodedata
+
 
 class ChainBuilder:
 
-    delimeters = ";:.!?"
-
     def __init__(self):
         self.mc = MarkovChain()
+        self.chars = chars = ['"', "-", "(", ")", "[", "]"]
+        self.delimeters = [';',':','.','!','?']
 
     def build_chain(self):
-        corpus = open('corpus.txt', 'r')
+        corpus = open('smaller_corpus.txt', 'r')
         for line in corpus:
-            line = line.replace('"', '')
-            line = line.replace('-', '')
+            # line = line.lower()
+            for c in self.chars:
+                line = line.replace(c, '')
             line = line.split()
             if len(line) > 1:
                 pre = line[0]

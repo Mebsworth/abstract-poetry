@@ -1,13 +1,20 @@
 <html>
     <head>
         <link rel="stylesheet" href="/static/Semantic-UI-CSS/semantic.min.css">
+        <link rel="stylesheet" href="/static/stylesheet.css">
+        <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
         <title>{{ title }}</title>
     </head>
     <body>
         <div style="margin-top: 15px"></div>
-        <div class="ui text container">
+        <div class="ui container">
             <div>
-                <h1 class="ui"> Maya Ebsworth Senior Design Project</h1>
+                <h1 class="ui">
+                    <a href="{{ url_for('index') }}">
+                         <i class="home icon black"></i>
+                    </a> 
+                    Maya Ebsworth Senior Design Project
+                </h1>
             </div>
             <hr>
             {% block content %}{% endblock %}

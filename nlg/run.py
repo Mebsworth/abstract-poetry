@@ -1,6 +1,7 @@
 from poem_generator import PoemGenerator
+from chain_builder import ChainBuilder
 
-pg = PoemGenerator([ "glass",
+tags = [ "glass",
     "drink",
     "cold",
     "no person",
@@ -20,8 +21,12 @@ pg = PoemGenerator([ "glass",
     "blur",
     "paper",
     "pattern"
-    ])
+    ]
+
+cb = ChainBuilder()
+cb.build_chain()
+chain = cb.get_chain()
+
+pg = PoemGenerator(tags, chain)
 
 poem = pg.get_poem()
-
-print(poem)

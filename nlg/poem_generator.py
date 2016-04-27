@@ -23,8 +23,6 @@ class PoemGenerator:
         line = tag
         next_word = self.chain.next(tag)
         while next_word is not None:
-            print(line)
-            print(next_word)
             line = line + " " + next_word.decode('utf-8')
             next_word = self.chain.next(next_word)
             if len(line) > 200:
